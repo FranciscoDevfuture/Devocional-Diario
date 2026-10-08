@@ -1,123 +1,50 @@
-/*Resete Global da margem */
-
-*{
+/* Reset Global */
+* {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
-/*Cabeçalho*/
-
-
-body{
-    
+body {
     background-image: url(../assets/img/back02.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: segoe UI, Arial, sans-serif;
-
-
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* Cabeçalho */
 header {
     background-color: #132230;
-    color:white;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
-
-
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-
 }
 
 nav a {
-    color:white;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
 }
 
-nav a:hover{
-    color:#d7e746;
-
+nav a:hover {
+    color: #d7e746;
 }
-
 
 main {
     padding: 25px;
-
 }
 
-section{
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: rgba(164, 204, 118, 0.9);
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-
-}
-
-
-section, p {
-    text-align: center;
-
-
-}
-
-footer{
-    text-align: center;
-
-
-}
-
-.texto{
-    text-align: left;
-
-}
-
-.titulo{
-    color:black;
-    text-align: center;
-
-
-
-}
-
-.texto-devocional{
-    text-align: justify;
-}
-
-.estudos{
-    text-align: justify;
-}
-
-/*colaca efeito no cartao*/
-#devocional{
-    transition: transform 0.3s ease;
-    box-shadow: 0.3s ease;
-
-}
-
-.img-devocional{
-    border-radius: 10px;
-    width: 150px;
-    height: 150px;
-
-
-}
-
-/* 2. Aplica o zoom e melhora a sombra ao passar o mouse */
-
-
+/* Cartões / Seções */
 section {
     max-width: 800px;
     margin: 30px auto;
@@ -125,7 +52,7 @@ section {
     border-radius: 10px;
     padding: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição unificada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 section:hover {
@@ -133,19 +60,58 @@ section:hover {
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/*  RESPONSIVIDADE PARA CELULARES E TABLETS*/
+section p {
+    text-align: center;
+}
 
-/* Regras aplicadas em telas de até 768px */
+.titulo {
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.texto {
+    text-align: left;
+}
+
+.texto-devocional, .estudos {
+    text-align: justify;
+}
+
+.lista-devocional, .lista-pratica {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.lista-devocional li, .lista-pratica li {
+    margin-bottom: 8px;
+}
+
+.img-devocional {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: rgba(19, 34, 48, 0.85);
+}
+
+/* RESPONSIVIDADE PARA CELULARES E TABLETS */
 @media (max-width: 768px) {
-    
-    /* Reorganiza o cabeçalho em coluna */
     header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 
-    /* Quebra os botões do menu em linhas se faltar espaço */
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -153,22 +119,17 @@ section:hover {
     }
 
     nav a {
-        font-size: 13px; /* Reduz levemente a fonte dos links no celular */
+        font-size: 13px;
     }
 
-    /* Ajusta os cartões para melhor aproveitamento no celular */
     section {
         margin: 15px auto;
         padding: 20px 15px;
-        width: 90%; /* Garante margem nas laterais */
+        width: 90%;
     }
 
-    /* Faz a imagem adaptar-se à largura da tela sem distorcer */
     .img-devocional {
-        width: 50%;
-        max-width: 50%;
-        height: auto;
+        width: 120px;
+        height: 120px;
     }
 }
-
-
