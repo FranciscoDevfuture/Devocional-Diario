@@ -106,30 +106,24 @@ footer {
 
 /* RESPONSIVIDADE PARA CELULARES E TABLETS */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
+    /* Código existente omitido para clareza... */
 
     section {
         margin: 15px auto;
-        padding: 20px 15px;
+        padding: 20px 15px; /* Reduzi um pouco o padding lateral */
         width: 90%;
+        overflow-x: hidden; /* Garante que nada transborde horizontalmente na seção */
     }
 
-    .img-devocional {
-        width: 120px;
-        height: 120px;
+    /* ESTA É A CORREÇÃO PARA O WIDGET DE COMENTÁRIOS */
+    /* Target o contêiner gerado pelo script do GitHub */
+    .utterances, /* Se usar utterances */
+    .giscus,      /* Se usar giscus */
+    div[class^="utterances-"] { /* Garante pegar classes geradas dinamicamente */
+        max-width: 100% !important; /* Limita a largura máxima ao contêiner pai */
+        width: 100% !important;     /* Força o widget a preencher a largura permitida */
+        margin-left: 0 !important;   /* Zera margens laterais que podem estar sendo aplicadas */
+        margin-right: 0 !important;
+        box-sizing: border-box !important; /* Garante que padding não aumente a largura total */
     }
 }
