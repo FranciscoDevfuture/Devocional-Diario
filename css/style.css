@@ -1,129 +1,183 @@
-/* Reset Global */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ---------- Base ---------- */
+:root {
+    --videira: #1f3a2b;       /* verde videira escuro */
+    --folha: #eef2e6;         /* fundo da leitura */
+    --uva: #6b2d4a;           /* acento: cor da uva */
+    --ouro: #c9a24a;          /* detalhes */
+    --texto: #232a24;
+    --suave: #5c675d;
+    --linha: #cdd7c2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px; /* o título não fica atrás do cabeçalho fixo */
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-    background-image: url(../assets/img/back02.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: 1.0625rem;      /* 17px */
+    line-height: 1.75;
+    color: var(--texto);
+    background: var(--videira);
+    min-height: 100vh;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #132230;
-    color: white;
+/* Fundo com imagem: funciona também no iPhone (sem background-attachment: fixed) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url(../assets/img/back02.jpeg) center / cover no-repeat;
+    opacity: .35;
+    z-index: -1;
+}
+
+a { color: var(--uva); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-offset: 3px; }
+
+/* ---------- Cabeçalho ---------- */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--videira);
+    color: #fff;
+    border-bottom: 2px solid var(--ouro);
+}
+
+.topo-barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 12px 18px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
+.marca {
+    color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-nav a:hover {
-    color: #d7e746;
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.menu-botao span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
 }
 
+.menu { display: none; background: #172c20; }
+.menu.aberto { display: block; }
+.menu ul { list-style: none; max-width: 860px; margin: 0 auto; }
+.menu a {
+    display: block;
+    padding: 14px 18px;
+    color: #fff;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,.12);
+}
+.menu a:hover, .menu a:focus-visible { color: var(--ouro); }
+
+/* ---------- Leitura ---------- */
 main {
-    padding: 25px;
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--folha);
 }
 
-/* Cartões / Seções */
 section {
-    max-width: 800px;
-    margin: 30px auto;
-    background-color: rgba(164, 204, 118, 0.9);
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 36px 20px;
+    border-bottom: 1px solid var(--linha);
+}
+section:last-child { border-bottom: 0; }
+
+h1, h2 { line-height: 1.25; color: var(--videira); }
+h1 { font-size: clamp(1.6rem, 6vw, 2.2rem); margin-bottom: 12px; }
+h2 { font-size: clamp(1.35rem, 4.5vw, 1.7rem); margin-bottom: 16px; }
+
+p + p { margin-top: 1em; }
+
+.abertura { text-align: center; padding-top: 44px; }
+.abertura p { color: var(--suave); }
+
+.data { color: var(--suave); font-size: .95rem; margin-bottom: 4px; }
+
+/* Versículo: o elemento de destaque da página */
+.versiculo {
+    margin: 22px 0 26px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--uva);
+    background: #fff;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.versiculo cite {
+    display: block;
+    margin-top: 8px;
+    font-size: .95rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--uva);
 }
 
-section:hover {
-    transform: scale(1.02);
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-section p {
-    text-align: center;
-}
-
-.titulo {
-    color: black;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.texto {
-    text-align: left;
-}
-
-.texto-devocional, .estudos {
-    text-align: justify;
-}
-
-.lista-devocional, .lista-pratica {
-    text-align: left;
-    margin-left: 25px;
-    margin-top: 10px;
-}
-
-.lista-devocional li, .lista-pratica li {
-    margin-bottom: 8px;
-}
+.verdades, .pratica { margin: 16px 0 16px 1.2em; }
+.verdades li, .pratica li { margin-bottom: 12px; padding-left: 4px; }
+.verdades li::marker { color: var(--ouro); }
+.pratica li::marker { color: var(--uva); font-weight: 600; }
 
 .img-devocional {
-    border-radius: 10px;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 28px auto 0;
+    border-radius: 8px;
 }
 
+/* Frase do dia e Oração: únicas seções com fundo próprio */
+.destaque { background: #fff; text-align: center; }
+.frase, .oracao-texto { font-style: italic; }
+.oracao-texto { text-align: left; }
+
+.email { word-break: break-all; }
+
+/* ---------- Rodapé ---------- */
 footer {
     text-align: center;
-    padding: 20px;
-    color: white;
-    background-color: rgba(19, 34, 48, 0.85);
+    padding: 22px 18px;
+    color: #fff;
+    font-size: .9rem;
 }
 
-/* RESPONSIVIDADE PARA CELULARES E TABLETS */
-@media (max-width: 768px) {
-    /* Código existente omitido para clareza... */
+/* ---------- Telas maiores: menu em linha ---------- */
+@media (min-width: 768px) {
+    html { scroll-padding-top: 70px; }
+    .menu-botao { display: none; }
+    .topo { display: flex; justify-content: space-between; align-items: center; max-width: none; padding: 0 max(18px, calc((100% - 860px) / 2)); }
+    .topo-barra { padding: 14px 0; margin: 0; max-width: none; }
+    .menu, .menu.aberto { display: block; background: none; }
+    .menu ul { display: flex; gap: 22px; max-width: none; }
+    .menu a { padding: 0; border: 0; font-size: .95rem; }
+    main { margin: 28px auto; border-radius: 10px; }
+    section { padding: 44px 48px; }
+    .abertura { padding-top: 52px; }
+}
 
-    section {
-        margin: 15px auto;
-        padding: 20px 15px; /* Reduzi um pouco o padding lateral */
-        width: 90%;
-        overflow-x: hidden; /* Garante que nada transborde horizontalmente na seção */
-    }
-
-    /* ESTA É A CORREÇÃO PARA O WIDGET DE COMENTÁRIOS */
-    /* Target o contêiner gerado pelo script do GitHub */
-    .utterances, /* Se usar utterances */
-    .giscus,      /* Se usar giscus */
-    div[class^="utterances-"] { /* Garante pegar classes geradas dinamicamente */
-        max-width: 100% !important; /* Limita a largura máxima ao contêiner pai */
-        width: 100% !important;     /* Força o widget a preencher a largura permitida */
-        margin-left: 0 !important;   /* Zera margens laterais que podem estar sendo aplicadas */
-        margin-right: 0 !important;
-        box-sizing: border-box !important; /* Garante que padding não aumente a largura total */
-    }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
 }
