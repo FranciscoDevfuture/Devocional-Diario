@@ -3,103 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f3a2b">
     <title>Devocional Diário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta property="og:type" content="website">
-<meta property="og:title" content="Devocional Diário">
-<meta property="og:description" content="Reflexões e orações diárias para fortalecer sua caminhada cristã.">
-<meta property="og:image" content="https://FranciscoDevfuture.github.io/devocional-diario/assets/img/capa.jpeg">
-<meta property="og:url" content="https://FranciscoDevfuture.github.io/devocional-diario/">
+    <meta property="og:title" content="Devocional Diário">
+    <meta property="og:description" content="Reflexões e orações diárias para fortalecer sua caminhada cristã.">
+    <meta property="og:image" content="https://FranciscoDevfuture.github.io/devocional-diario/assets/img/capa.jpeg">
+    <meta property="og:url" content="https://FranciscoDevfuture.github.io/devocional-diario/">
 </head>
 <body>
 
-    <!--Cabeçalho-->
-    <header>
-        <h1>Devocional Diário</h1>
-        <nav>
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="topo-barra">
+            <a href="#inicio" class="marca">Devocional Diário</a>
+            <button class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav id="menu" class="menu">
             <ul>
-                <li><a href="#Inicio">Início</a></li>
-                <li><a href="#devocional">Devocional Diário</a></li>
-                <li><a href="#reflexao">Reflexão Semanal</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#devocional">Devocional</a></li>
+                <li><a href="#reflexao">Aplicação</a></li>
                 <li><a href="#oracao">Oração</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-
         </nav>
-         
-        
     </header>
-    <!--Conteúdo-->
 
-        <main>
-            <section id="Inicio">
-                <h2>Olá Seja bem-vindo ao espaço Devocional Diário</h2>
-                <p>Aqui todos os dias traremos reflexões e orações para fortalecer na caminhada Cristão.</p>
-
-            </section>
-            <section id="frase">
-                <h2>Frase do Dia</h2>
-                <p>"Permanecer em Cristo não é uma obrigação — é um privilégio. É estar em casa, seguro e conectado Àquele que é a fonte da vida."</p>
-
-            </section>
-
-            <section id="devocional">
-                <h2 class="titulo">O Bom Pastor</h2>
-            <P>09 de outubro, 2026</P><br>
-            <p class="texto">
-                Versículo Base:
-                "Eu sou o bom pastor. O bom pastor dá a sua vida pelas ovelhas." — João 10:11</p><br>
-                <p class="texto-devocional">imagem do pastor e das ovelhas é uma das ilustrações mais profundas da Bíblia sobre o cuidado divino. Quando Jesus declara "Eu sou o Bom Pastor", Ele faz mais do que usar uma metáfora poética; Ele estabelece a natureza do Seu relacionamento com cada um de nós.
-                Diferente do mercenário, que trabalha apenas por interesse ou recompensa e abandona o rebanho diante do perigo, Jesus conhece Suas ovelhas pelo nome, guia Seus passos com paciência e protege o rebanho com Sua própria vida.
-                No dia a dia, é fácil nos sentirmos desorientados ou sobrecarregados pelas vozes do mundo. No entanto, o Bom Pastor nos lembra de três verdades fundamentais:Ele nos conhece intimamente: Nenhuma das suas dores, incertezas ou necessidades passa despercebida por Ele.
-
-                Ele nos guia a pastos verdes: Mesmo nos vales mais escuros, Sua vara e Seu cajado nos trazem consolo e direção.
-
-                Ele já provou Seu amor: O sacrifício na cruz foi a maior demonstração de que nada pode nos separar do Seu amor.
-
-                Hoje, decida desacelerar o coração para ouvir a voz do Bom Pastor acima do ruído ao seu redor.</p>
-                <img src="assets/img/bom-pastor.jpeg" alt="Ilustração sobre o Bom Pastor" class="img-devocional">
-
-            <!--seção de Reflexão-->
-            </section>
-            <section id="reflexao">
-                <h2 class="titulo">Aplicação Prática</h2>
-                <p class="estudos">Hoje, reserve um tempo para:<br>
-
-                1.Escutar a voz certa: Reserve momentos do seu dia para silenciar as distrações(redes, sociais, preocupações, ruídos) e a ler Palavra. É assim que reconhecemos a voz do Pastor.<br>
-                2.Entregue o controle: Identifique uma área da sua vida na qual você tem tentado "pastorear a si mesmo" com a própria força e confie essa situação ao cuidado de Deus.<br>
-                3.Descanse na proteção divina: Lembre-se de que a segurança da ovelha não depende de sua própria força, mas da presença e da fidelidade do Pastor.<br>
-                
-            </section>
-            <section id="oracao">
-                <h2 class="titulo">Oração</h2>
-                <p>Senhor Jesus, meu Bom Pastor, obrigado por me conhecer pelo nome, por cuidar de mim e por dar a Tua vida a meu favor. Peço que ajudes o meu coração a reconhecer a Tua voz em meio a tantas distrações do dia a dia. Ensina-me a confiar no Teu cuidado, no Teu direcionamento e no Teu descanso, sabendo que nada me faltará quando caminho ao Teu lado. Em Teu nome, Amém.</p>
-            </section>
-
-            <section id="sobre">
-                <h2 class="titulo">Sobre Devocional Diário</h2>
-                <p>Projeto sem fins lucrativos,Que Deus lhe abençoe grandemente.</p>
-<!-- Seção Contato -->
-        <section id="contato">
-            <h2 class="titulo">Contato</h2>
-            <p>Compartilhe esse projeto para poder levar a palavra de Deus para mais e mais pessoas.</p>
-            <p>✉️ E-mail: franco.jose.santos@gmail.com</p>
+    <!-- Conteúdo -->
+    <main>
+        <section id="inicio" class="abertura">
+            <h1>Seja bem-vindo ao Devocional Diário</h1>
+            <p>Todos os dias, uma reflexão e uma oração para fortalecer a sua caminhada cristã.</p>
         </section>
 
-        <!-- Mural de Orações (Seção Separada) -->
-        <section id="mural-oracao">
-            <h2 class="titulo">Mural de Pedidos de Oração</h2>
-            <p>Deixe aqui seu pedido de oração. Vamos orar uns pelos outros!</p>
-            
-            <!-- Script do Utterances -->
-            <script src="https://utteranc.es/client.js"
-                    repo="FranciscoDevfuture/devocional-diario"
-                    issue-term="pathname"
-                    theme="github-light"
-                    crossorigin="anonymous"
-                    async>
-            </script>
+        <section id="frase" class="destaque">
+            <h2>Frase do dia</h2>
+            <p class="frase">“Permanecer em Cristo não é uma obrigação — é um privilégio. É estar em casa, seguro e conectado Àquele que é a fonte da vida.”</p>
+        </section>
+
+        <section id="devocional">
+            <p class="data">09 de outubro de 2026</p>
+            <h2>O Bom Pastor</h2>
+
+            <blockquote class="versiculo">
+                <p>“Eu sou o bom pastor. O bom pastor dá a sua vida pelas ovelhas.”</p>
+                <cite>João 10:11</cite>
+            </blockquote>
+
+            <p>A imagem do pastor e das ovelhas é uma das ilustrações mais profundas da Bíblia sobre o cuidado divino. Quando Jesus declara “Eu sou o Bom Pastor”, Ele faz mais do que usar uma metáfora poética; Ele estabelece a natureza do Seu relacionamento com cada um de nós.</p>
+            <p>Diferente do mercenário, que trabalha apenas por interesse ou recompensa e abandona o rebanho diante do perigo, Jesus conhece Suas ovelhas pelo nome, guia Seus passos com paciência e protege o rebanho com Sua própria vida.</p>
+            <p>No dia a dia, é fácil nos sentirmos desorientados ou sobrecarregados pelas vozes do mundo. No entanto, o Bom Pastor nos lembra de três verdades fundamentais:</p>
+
+            <ul class="verdades">
+                <li><strong>Ele nos conhece intimamente:</strong> nenhuma das suas dores, incertezas ou necessidades passa despercebida por Ele.</li>
+                <li><strong>Ele nos guia a pastos verdes:</strong> mesmo nos vales mais escuros, Sua vara e Seu cajado nos trazem consolo e direção.</li>
+                <li><strong>Ele já provou Seu amor:</strong> o sacrifício na cruz foi a maior demonstração de que nada pode nos separar do Seu amor.</li>
+            </ul>
+
+            <p>Hoje, decida desacelerar o coração para ouvir a voz do Bom Pastor acima do ruído ao seu redor.</p>
+
+            <img src="assets/img/bom-pastor.jpeg" alt="Ilustração sobre o Bom Pastor" class="img-devocional" loading="lazy">
+        </section>
+
+        <section id="reflexao">
+            <h2>Aplicação prática</h2>
+            <p>Hoje, reserve um tempo para:</p>
+            <ol class="pratica">
+                <li><strong>Escutar a voz certa.</strong> Reserve momentos do seu dia para silenciar as distrações (redes sociais, preocupações, ruídos) e ler a Palavra. É assim que reconhecemos a voz do Pastor.</li>
+                <li><strong>Entregar o controle.</strong> Identifique uma área da sua vida na qual você tem tentado “pastorear a si mesmo” com a própria força e confie essa situação ao cuidado de Deus.</li>
+                <li><strong>Descansar na proteção divina.</strong> Lembre-se de que a segurança da ovelha não depende de sua própria força, mas da presença e da fidelidade do Pastor.</li>
+            </ol>
+        </section>
+
+        <section id="oracao" class="destaque">
+            <h2>Oração</h2>
+            <p class="oracao-texto">Senhor Jesus, meu Bom Pastor, obrigado por me conhecer pelo nome, por cuidar de mim e por dar a Tua vida a meu favor. Peço que ajudes o meu coração a reconhecer a Tua voz em meio a tantas distrações do dia a dia. Ensina-me a confiar no Teu cuidado, no Teu direcionamento e no Teu descanso, sabendo que nada me faltará quando caminho ao Teu lado. Em Teu nome, Amém.</p>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre o Devocional Diário</h2>
+            <p>Projeto sem fins lucrativos. Que Deus lhe abençoe grandemente.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Compartilhe este projeto para levar a Palavra de Deus a mais e mais pessoas.</p>
+            <p><a class="email" href="mailto:franco.jose.santos@gmail.com">franco.jose.santos@gmail.com</a></p>
         </section>
 
     </main>
@@ -108,8 +105,18 @@
         <p>© 2026 Devocional Diário. Todos os direitos reservados.</p>
     </footer>
 
+    <script>
+        const botao = document.getElementById('menu-botao');
+        const menu = document.getElementById('menu');
+        function fechar() {
+            menu.classList.remove('aberto');
+            botao.setAttribute('aria-expanded', 'false');
+        }
+        botao.addEventListener('click', () => {
+            const aberto = menu.classList.toggle('aberto');
+            botao.setAttribute('aria-expanded', aberto);
+        });
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', fechar));
+    </script>
 </body>
 </html>
-
-
-            
