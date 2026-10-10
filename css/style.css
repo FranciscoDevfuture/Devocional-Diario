@@ -45,19 +45,17 @@ main {
 }
 
 /* Cartões / Seções */
-/* Seções sem o visual de cartão/quadrado */
 section {
     max-width: 800px;
     margin: 30px auto;
-    padding: 20px;
-    /* Fundo transparente e sem sombras */
-    background-color: transparent; 
-    box-shadow: none;
-    border-radius: 0;
+    background-color: rgba(164, 204, 118, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-sectio:hover {
+section:hover {
     transform: scale(1.02);
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
